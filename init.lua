@@ -15,7 +15,7 @@ o.scrolloff = 5       -- Show at least 5 lines
 
 -- window-local options
 wo.relativenumber = true	-- use relative numbers
-wo.colorcolumn = "80"		  -- columnt to indicate end of 80 characters
+wo.colorcolumn = "88"		  -- columnt to indicate end of 80 characters
 wo.conceallevel = 0       -- Determine how text with the "conceal" syntax attribute :syn-conceal is shown
 wo.foldmethod = 'marker'
 
@@ -29,7 +29,8 @@ o.shiftwidth = 4          -- number of spaces used for >> and <<
 -- vim.cmd[[ "set viminfo+=n~/vim/viminfo"]]
 -- 
 -- Specify which python environment is to be used with neovim
-vim.g.python3_host_prog = vim.call("expand", "/home/emacedo/.config/nvim/pyenv/bin/python3.9")
+vim.g.loaded_python3_provided = 1
+vim.g.python3_host_prog = vim.call("expand", "~/.config/nvim/pyenv/bin/python")
 
 -- "===================================================================
 -- " CUSTOM INDENTATION
