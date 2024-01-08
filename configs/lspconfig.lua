@@ -14,13 +14,13 @@ for _, lsp in ipairs(servers) do
 end
 
 lspconfig["pylsp"].setup {
-  cmd = {"/home/emacedo/.config/nvim/pyenv/bin/pylsp"},
+  cmd = {vim.call("expand", "~/.config/nvim/pyenv/bin/pylsp")},
   on_attach = on_attach,
   capabilities = capabilities,
 }
 
 require'lspconfig'.jedi_language_server.setup{
-  cmd = {"/home/emacedo/.config/nvim/pyenv/bin/jedi-language-server"},
+  cmd = {vim.call("expand", "~/.config/nvim/pyenv/bin/jedi-language-server")},
   on_attach = on_attach,
   capabilities = capabilities,
 }
